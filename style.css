@@ -1,0 +1,78 @@
+/*-- Document Defaults and Clearing --*/
+html, body, div {/*-- zeros the margins and padding on containers --*/
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: block;/*-- allows margin:auto to function --*/
+	width: 90%; /*-- supplies 5% margin on either side --*/
+	margin: 0 auto; /*-- sets top margin to 0 and left and right to auto --*/
+}
+div, footer {
+	margin: 0 -2px; /*-- corrects spacing bug --*/
+}
+* {/*-- selects every element on the page and sets them to use the border-box sizing model --*/
+	box-sizing: border-box; /*-- border-box means borders are internal, etc. --*/
+}
+h1, h2, h3, h4, h5, h6, p { /*-- zeros the margin and paddings on all text elements --*/
+	margin: 0;
+	padding: 0;
+}
+
+/*-- Panel Styles --*/
+.panel {
+	display: inline-block;/*-- allows panels to flow with content --*/
+	width: 100%; /*-- sets default width of panels for small screens --*/
+	padding: 20px 10px; /*-- sets padding inside panels --*/
+	border: 3px solid #555;
+}
+.panel img {/*-- makes panel images scale with their containers --*/
+	width: 100%;
+	height: auto;
+}
+
+/*-- Hero Box Styles --*/
+.hero {
+	padding: 5% 0px 3% 0px; /*-- sets padding in hero container --*/
+}
+.hero h1 {
+	font-size: 26px; /*-- sets hero title font size for small screens --*/
+}
+.hero p {
+	font-size: 18px; /*-- sets hero paragraph font size for small screens --*/
+}
+/*-- Footer Styles --*/
+footer p {
+	text-align: center;
+	padding: 16px 0px;
+}
+
+/*-- Sets Panel Backgrounds by ID --*/
+#red {background-color: red;}
+#yellow {background-color: yellow;}
+#orange {background-color: orange;}
+#gold {background-color: gold;}
+#teal {background-color: teal;}
+#green {background-color: green;}
+#aqua {background-color: aqua;}
+#blue {background-color: blue;}
+#lavender {background-color: lavender;}
+#lightsteelblue {background-color: lightsteelblue;}
+#lightcoral {background-color: lightcoral;}
+#lightsalmon {background-color: lightsalmon;}
+
+/*-- Sets Media Queries --*/
+@media screen and (min-width: 478px) {/*-- specifies panel properties for screens LARGER than 480px --*/
+	.panel {width: 50%;}
+	.hero h1 {font-size: 32px;}
+	.hero p {font-size: 24px;}
+}
+@media screen and (min-width: 768px) {/*-- specifies panel properties for screens LARGER than 768px --*/
+	.panel {width: 33.33%;}
+	.hero h1 {font-size: 40px;}
+	.hero p {font-size: 32px;}
+}
+@media screen and (min-width: 1024px) {/*-- specifies panel properties for screens LARGER than 1024px --*/
+	.panel {width: 25%;}
+	.hero h1 {font-size: 48px;}
+}
